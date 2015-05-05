@@ -32,7 +32,7 @@ class JobAbortForm extends ContentEntityConfirmFormBase {
    * {@inheritdoc}
    */
   public function getCancelUrl() {
-    return Url::fromRoute('/admin/tmgmt/jobs/');
+    return new Url('http://example.com');
   }
 
   /**
