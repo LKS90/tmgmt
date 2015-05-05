@@ -10,6 +10,7 @@ namespace Drupal\tmgmt\Form;
 use Drupal\Component\Utility\SafeMarkup;
 use Drupal\Core\Entity\ContentEntityConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Provides a form for deleting a node.
@@ -31,7 +32,7 @@ class JobAbortForm extends ContentEntityConfirmFormBase {
    * {@inheritdoc}
    */
   public function getCancelUrl() {
-    return $this->entity->urlInfo();
+    return Url::fromRoute('/admin/tmgmt/jobs/');
   }
 
   /**
